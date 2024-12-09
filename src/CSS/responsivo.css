@@ -1,0 +1,40 @@
+/* Adaptadno para a tela de alguns dispositivo com o máximo de 750 pixeis de largura */
+
+@media(max-width: 950px) {
+    .cartoes {
+        /*o sentido do elemento | coluna*/
+        flex-direction: column;
+        /*centraliza os itens*/
+        align-items: center;
+        /*margem */
+        padding: 30px 0;
+    }
+    .cartao-tete {
+        max-width: 300px;
+    }
+    .cartao-tete .cartao-info {
+        padding: 60px 30px 30px;
+        margin-top: -50px;
+    }
+    .cartao-tete .cartao-info h3 {
+        font-size: 16px;
+    }
+    .listagem {
+        max-width: 100%;
+        display: block;
+    }
+    .listagem .imagem {
+        width: 100%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        margin-bottom: 10px;
+        border-radius: 8px;
+    }
+    .listagem ul {
+        margin-top: 100px;
+        display: block;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}

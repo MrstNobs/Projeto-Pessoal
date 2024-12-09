@@ -1,0 +1,181 @@
+body {
+    /* Coloca a fonte Poppins do google, caso isto falhe a fonte Sans-Serif ira substituir */
+    font-family: "Poppins", sans-serif;
+    background-image: url('../Imagens/HeloKittFund.jpg');
+    background-size: cover;
+    background-position: center;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    backdrop-filter: blur(4px);
+}
+main {
+    /*elemento lado a lado*/
+    display: flex;
+    /*Forma Justifica os intens e colo no centro*/
+    justify-content: center;
+    /*Centraliza e alinha o itens*/
+    align-items: center;
+    /*Minimo de aluto para o mnito do usuario Viewer Higher*/
+    min-height: 100vh;
+}
+.cartoes {
+    /*Elemento lado a lado*/
+    display: flex;
+    /*Espaçamento entres os elemento */
+    gap: 30px;
+    /*Margem das bordas dos elemento com a pagina, 30 width(largura) e 0 hight(altura)*/
+    padding: 30px 0;
+}
+.cartao-tete {
+    /*Retira o elemento(que seria as coms as informcaso e tals*/
+    display: none;
+    /*maximo de largura*/
+    max-width: 360px;
+    /*Raio da borda*/
+    border-radius: 10px;
+    /*Sombra do elemento*/
+    box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-right: 30px;
+}
+/*Mosta o cartao-tete apenas com o quem esta com a classe 'Amostra'*/
+.cartao-tete.amostra {
+    /*Mostra na tela e coloca elemento um embaixo do outro*/
+    display: block;
+}
+/*Ajusta a imagem no cartao-tete*/
+.cartao-tete img {
+    /*largura 100% da tela*/
+    width: 100%;
+    /*altura 100% da tela*/
+    height: 100%;
+    /*margem da parte de cima(top) com 10 pixel de distancia*/
+    margin-top: 10px;
+    /*Se a imagem for muito grande, se ajusat o tamanho dela o restante dos elemento junto se ajustarão*/
+}
+.cartao-tete .cartao-topo {
+    /*Ajuste da parte de cima do cartao faznedo com que ele fique um pouco menor por conta da margem.
+    30 widht(largura) em cada lado, 40 hight(altura) encima e 0 hight(altura) em baixo*/
+    padding: 20px 50px 0px;
+} 
+.cartao-tete .nome{
+    /*Margem da parte de baixo do elemento*/
+    margin-bottom: 5px;
+}
+.cartao-tete .tipo {
+    /*Cor de funfo da classe 'tipo'*/
+    background-color: #FFFFFF;
+    /*Tamanho da Fonte*/
+    font-size: 12px;
+    /*opacidade*/
+    opacity: 0.7;
+    /*Raio da borda | deixa a borda mais redonda*/
+    border-radius: 10px;
+    /*margem do elemento|
+    2(width) ambos lados, 10(hight) ambos lados*/
+    padding: 2px 10px;
+}
+.cartao-tete .detalhes {
+    /*Cor das letras*/
+    color: #ff4c6c;
+    /*elemento lado a lado*/
+    display: flex;
+    /*Escapno entre os elemtnro internos*/
+    justify-content: space-between;
+    /*alinha os itens para o central*/
+    align-items: center;
+}
+.cartao-tete .cartao-info {
+    /*Cor de fundo do elemento*/
+    background-color: #ff92bd;
+    /*Elemento lado a lado*/
+    display: flex;
+    /*Espaço entre os elementos*/
+    justify-content: space-between;
+    /*Margin entre os eelemernotr | 80 widht, 30 width; 50 hight ambos lados*/
+    padding: 80px 20px 30px;
+    /*Diminui oun sobre 7 pixeis acima*/
+    margin-top: -70px;
+    /*Raio da Borda | quanot mais pixeis masi arredondado*/
+    border-radius: 8px;
+}
+.cartao-tete .cartao-info h3{
+    /*Tamanho da Letra*/
+    font-size: 20px;
+    /*margem da parte de baixo*/
+    margin-bottom: 15px;
+    /*nao entendi*/
+    border-radius: 1px solid #6b727a;
+}
+.cartao-tete .cartao-info .descricao {
+    /*encolhe um pouco a descricao*/
+    padding: 0 10px;
+    /*Tamanho da Fonte*/
+    font-size: 15px;
+    /*Maimo de altura do cartao de informação*/
+    max-height: 150px;
+    /*Esconde o texto e deixa o usuaro ver para a onde esra indo o texto*/
+    overflow-y: scroll;
+}
+.tipo-coracao {
+    /*Cor de fundo do cartoa*/
+    background-color: #ffadbc;
+}
+.tipo-cosplay {
+    /*Cor de fundo do cartao*/
+    background-color: #BA55D3;
+}
+.listagem {
+    /*Radio da borda*/
+    border-radius: 9px;
+    /*maximo de largura*/
+    max-width: 250px;
+    margin-top: -450px;
+}
+.listagem .imagem img {
+    /*largura de 25% da tela*/
+    width: 18%;
+}
+.listagem .imagem {
+    /*Cor de fundo do elemento*/
+    background-color: #ffaaaa;
+    color: #FF1493;
+    /*Elemento lado a lado dentro do elemnto*/
+    display: flex;
+    /*Centraliza os itens*/
+    align-items: center;
+    /*Espaco entre os eelemento dentro do eleento*/
+    justify-content: space-between;
+    /*margem | sla me esqueci*/
+    padding: 0px 10px;
+    /*margem de baixo*/
+    margin-bottom: 10px;
+    /*Mostra que é clickavel*/
+    cursor: pointer;
+    /*raio da borda direita encima | arrendondamento */
+    border-top-left-radius: 30px;
+    /*Raio da borda direita embaixo | arredondamento*/
+    border-bottom-left-radius: 30px;
+    /*minimo de altura*/
+    min-height: 70px;
+    /*Transição de saindo fora| maximo seria 1*/
+    transition:  0.15 ease-in-out;
+    border-radius: 30px;
+}
+.listagem .imagem:hover {
+    /*da zoom em uam certa escal com o 'transition anterior*/
+    transform: scale(1.05);
+}
+.listagem .imagem span {
+    /*margem da esquerda do elemnto */
+    padding-right: 20px;
+}
+.listagem .imagem.selecionado {
+    background-color: #ffaaaa;
+}

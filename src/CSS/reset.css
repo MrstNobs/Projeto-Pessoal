@@ -1,0 +1,9 @@
+* {
+    padding: 0;  /* Tira a margem dos elementacom com a borda da pagina */
+    margin: 0; /* Zera a margem entre os elemento dos elementos */
+    box-sizing: border-box; /* Retiar a margem ao redor da cosia sla */
+}
+
+ul {
+    list-style-type: none; /* Tira i estilo da Lista Não Ordenada que sriam bolinhas e coloca nada pois foi tirado */
+}
